@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #dddddd;
+}
+
+.banner {
+    background-color: #ff6c11;
+    color: #fff;
+    font-size: large;
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.box {
+    background-color: #ff6c11;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-box {
+    margin-bottom: 20px;
+    width: 450px;
+}
+
+.form-box header {
+    font-size: 25px;
+    font-weight: 700;
+    color: #ffffff;
+    padding-bottom: 10px;
+    border-bottom: 1px solid ff6c11
+}
+
+.form-box form .field {
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.form-box form .field label {
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+.form-box form .field input {
+    padding: 10px;
+    border: 1px solid #ff6c11;
+    border-radius: 5px;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.btn {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.submit {
+    width: 100%;
+}
+
+.link {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.here {
+    color: #ffffff;
+    text-decoration: none;
+}
