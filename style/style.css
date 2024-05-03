@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
+/*index and register*/
 * {
     padding: 0;
     margin: 0;
@@ -106,4 +107,74 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+}
+
+/*home*/
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #ff6c11;
+    color: #fff;
+    line-height: 60px;
+    z-index: 100;
+}
+
+.homeBox {
+    background-color: #ffffff7a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.right-links {
+    padding: 0 10px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.main-homeBox {
+    display: flex;
+    /*changes may be made*/
+    flex-direction: column;
+    width: 70%;
+}
+
+.main-homeBox .top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bottom {
+    width: 100%;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 840px) {
+    .main-homeBox .top {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .top .homeBox {
+        margin: 10px 10px;
+    }
+
+    .bottom {
+        margin-top: 0;
+    }
 }
