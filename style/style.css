@@ -13,7 +13,7 @@ body {
 }
 
 .banner {
-    background-color: #43e303;
+    background-color: #42e303c5;
     color: #000000;
     font-size: large;
     padding: 10px;
@@ -28,7 +28,7 @@ body {
 }
 
 .box {
-    background-color: #43e303;
+    background-color: #9fe683c5;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -115,7 +115,7 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 10px 50px;
-    background-color: #43e303;
+    background-color: #42e303c5;
     color: #000000;
     line-height: 60px;
     z-index: 100;
@@ -132,6 +132,11 @@ body {
 .logo {
     font-size: 25px;
     font-weight: 900;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #000000;
 }
 
 .right-links {
