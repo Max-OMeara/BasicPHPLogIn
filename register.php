@@ -37,7 +37,7 @@
                     <input type="submit" class="btn" name="submit">
                 </div>
                 <div class="link">
-                    Already Registered? Sign In <a class="here" href="index.html">Here</a>
+                    Already Registered? Sign In <a class="here" href="index.php">Here</a>
                 </div>
             </form>
         </div>

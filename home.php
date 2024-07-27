@@ -14,7 +14,7 @@
             <p> <a href="home.php">BankBuddy</a></p>
         </div>
         <div class="right-links">
-            <a href="edit.html"><button class="btn">Change Profile</button></a>
+            <a href="edit.php"><button class="btn">Change Profile</button></a>
             <a href="logout.php"><button class="btn">Log Out</button></a>
         </div>
     </div>

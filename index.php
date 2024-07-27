@@ -29,7 +29,7 @@
                     <input type="submit" class="btn" name="submit">
                 </div>
                 <div class="link">
-                    Not yet registered? Register <a class="here" href="register.html">Here</a>
+                    Not yet registered? Register <a class="here" href="register.php">Here</a>
                 </div>
             </form>
         </div>
