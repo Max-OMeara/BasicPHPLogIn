@@ -31,7 +31,7 @@
                     echo "<a href='javascript:self.history.back()'><button class='btn'>Go Back</button></a>";
                 } else {
                     // Validate inputs before inserting into database
-                    if ($fullName && $email && $username && $age && $password) {
+                    if ($name && $email && $username && $age && $password) {
                         $query = "INSERT INTO users (name, Username, Email, Age, Password) VALUES ('$name', '$username', '$email', '$age', '$password')";
                         $result = mysqli_query($con, $query);
                         if ($result) {
