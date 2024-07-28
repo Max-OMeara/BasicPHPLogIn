@@ -16,7 +16,7 @@
         <div class="right-links">
             <a href="edit.php"><button class="btn">Change Profile</button></a>
             <a href="home.php"><button class="btn">Back to Home</button></a>
-            <a href="logout.php"><button class="btn">Log Out</button></a>
+            <a href="index.php"><button class="btn">Log Out</button></a>
         </div>
     </div>
     <div class="container">

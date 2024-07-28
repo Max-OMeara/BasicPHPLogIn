@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Register</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
 
@@ -14,33 +14,70 @@
     </div>
     <div class="container">
         <div class="box form-box">
-            <header>Sign Up</header>
-            <form action="" method="post">
-                <div class="field input">
-                    <label for="fullName">Full Name</label>
-                    <input type="text" name="fullName" id="fullName" placeholder="Enter your full name" required>
-                </div>
-                <div class="field input">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" placeholder="Enter your email" required>
-                </div>
-                <div class="field input">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" id="username" placeholder="Enter your username" required>
-                </div>
-                <div class="field input">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Enter your password" required>
-                    <i class="fas fa-eye toggle"></i>
-                </div>
-                <div class="field">
-                    <input type="submit" class="btn" name="submit">
-                </div>
-                <div class="link">
-                    Already Registered? Sign In <a class="here" href="index.php">Here</a>
-                </div>
-            </form>
+            <?php
+            include('php/config.php');
+
+            if (isset($_POST['submit'])) {
+                $fullName = $_POST['fullName'] ?? '';
+                $email = $_POST['email'] ?? '';
+                $username = $_POST['username'] ?? '';
+                $age = $_POST['age'] ?? '';
+                $password = $_POST['password'] ?? '';
+
+                // Check if email already exists
+                $verify = mysqli_query($con, "SELECT Email FROM users WHERE Email = '$email'") or die("Error Occurred");
+                if (mysqli_num_rows($verify) > 0) {
+                    echo "<script>alert('Email already exists')</script>";
+                    echo "<a href='javascript:self.history.back()'><button class='btn'>Go Back</button></a>";
+                } else {
+                    // Validate inputs before inserting into database
+                    if ($fullName && $email && $username && $age && $password) {
+                        $query = "INSERT INTO users (FullName, Username, Email, Age, Password) VALUES ('$fullName', '$username', '$email', '$age', '$password')";
+                        $result = mysqli_query($con, $query);
+                        if ($result) {
+                            echo "<script>alert('User Registered Successfully')</script>";
+                            echo "<a href='index.php'><button class='btn'>Log In Now</button></a>";
+                        } else {
+                            echo "<script>alert('User Registration Failed')</script>";
+                        }
+                    } else {
+                        echo "<script>alert('All fields are required')</script>";
+                    }
+                }
+            } else {
+            ?>
+                <header>Sign Up</header>
+                <form action="" method="post">
+                    <div class="field input">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" name="fullName" id="fullName" placeholder="Enter your full name (No Spaces)" required>
+                    </div>
+                    <div class="field input">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="field input">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="field input">
+                        <label for="age">Age</label>
+                        <input type="text" name="age" id="age" placeholder="Enter your age" required>
+                    </div>
+                    <div class="field input">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                        <i class="fas fa-eye toggle"></i>
+                    </div>
+                    <div class="field">
+                        <input type="submit" class="btn" name="submit">
+                    </div>
+                    <div class="link">
+                        Already Registered? Sign In <a class="here" href="index.php">Here</a>
+                    </div>
+                </form>
         </div>
+        <?php } ?>
     </div>
 </body>
 
