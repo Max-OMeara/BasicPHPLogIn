@@ -18,7 +18,7 @@
             include('php/config.php');
 
             if (isset($_POST['submit'])) {
-                $fullName = $_POST['fullName'] ?? '';
+                $name = $_POST['name'] ?? '';
                 $email = $_POST['email'] ?? '';
                 $username = $_POST['username'] ?? '';
                 $age = $_POST['age'] ?? '';
@@ -32,7 +32,7 @@
                 } else {
                     // Validate inputs before inserting into database
                     if ($fullName && $email && $username && $age && $password) {
-                        $query = "INSERT INTO users (FullName, Username, Email, Age, Password) VALUES ('$fullName', '$username', '$email', '$age', '$password')";
+                        $query = "INSERT INTO users (name, Username, Email, Age, Password) VALUES ('$name', '$username', '$email', '$age', '$password')";
                         $result = mysqli_query($con, $query);
                         if ($result) {
                             echo "<script>alert('User Registered Successfully')</script>";
@@ -49,8 +49,8 @@
                 <header>Sign Up</header>
                 <form action="" method="post">
                     <div class="field input">
-                        <label for="fullName">Full Name</label>
-                        <input type="text" name="fullName" id="fullName" placeholder="Enter your full name (No Spaces)" required>
+                        <label for="name">First Name</label>
+                        <input type="text" name="name" id="name" placeholder="Enter your first name" required>
                     </div>
                     <div class="field input">
                         <label for="email">Email</label>
