@@ -13,7 +13,7 @@ body {
 }
 
 .banner {
-    background-color: #42e303c5;
+    background-color: #4d8e35c5;
     color: #000000;
     font-size: large;
     padding: 10px;
@@ -182,4 +182,14 @@ main {
     .bottom {
         margin-top: 0;
     }
+}
+
+.message {
+    text-align: center;
+    background: #42e303c5;
+    padding: 15px 0px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: red;
 }
