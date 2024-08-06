@@ -37,7 +37,8 @@
 
             //echo "<a href='edit.php'><button class='btn'>Change Profile</button></a>";
             ?>
-
+            <a href="php/logout.php"><button class="btn">Input Daily Spendings</button></a>
+            <a href="job.php"><button class="btn">Job Information</button></a>
             <a href="edit.php"><button class="btn">Change Profile</button></a>
             <a href="php/logout.php"><button class="btn">Log Out</button></a>
         </div>
