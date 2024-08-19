@@ -1,8 +1,8 @@
-# BankBuddy - Personal Finance Tracker
+# Basic PHP Log In
 
 ## Project Overview
 
-BankBuddy is a basic web application built with PHP, MySQL, and CSS. The main goal of this project was to create a login page that allows users to register, log in, and update their personal information. It was initially conceived as a learning project to get hands-on experience with PHP and MySQL. The original plan was to expand the project into a full-fledged personal finance tracker, but due to time constraints, the project was not further developed beyond its current state.
+Basic PHP Log In is a basic web application built with PHP, MySQL, and CSS. The main goal of this project was to create a login page that allows users to register, log in, and update their personal information. It was initially conceived as a learning project to get hands-on experience with PHP and MySQL. The original plan was to expand the project into a full-fledged personal finance tracker, but due to time constraints, the project was not further developed beyond its current state.
 
 ## Features
 
@@ -39,12 +39,12 @@ To run this project locally:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/bankbuddy.git
+   git clone https://github.com/yourusername/BasicPHPLogIn.git
    ```
 
 2. **Navigate to the project directory**:
    ```bash
-   cd bankbuddy
+   cd BasicPHPLogIn
    ```
 
 3. **Set up the database**:
